@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Personal</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellota+Text&display=wap" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/AgendaMVC/Resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="http://localhost/AgendaMVC/Resources/css/index.css">
+
+</head>
+<body>
+
+<main class="container mt-3">
+    <h1 class="text-center mb-3"><b>Agenda Personal</b></h1>
+    <section class="row">
+        <div class="col-sm-5 cajaContacto p-4">
+            <form name="frmContacto" method="POST" action="../servidor/index.php">
+                <div class="form-group">
+                    <label for="txtNombre">Nombre: </label>
+                    <input type="text" name="txtNombre" id="txtNombre" class="form-control" placeholder="Ingrese nombre">
+                </div>
+                  
+                <div class="form-group">
+                    <label for="txtNombre">Teléfono Fijo: </label>
+                    <input type="text" name="txtTelFijo" id="txtTelFijo" class="form-control" placeholder="Ingrese teléfono fijo">
+                </div>
+            
+                <div class="form-group">
+                    <label for="txtNombre">Teléfono Celular: </label>
+                    <input type="text" name="txtTelCel" id="txtTelCel" class="form-control" placeholder="Ingrese teléfono celular"> 
+                </div>
+  
+                <!-- <input type="submit" class="btn btn-info btn-block" value="Agregar contacto">-->
+                <a onclick="registrarContacto()" class="btn btn-info btn-block">Agregar Contacto</a>
+  
+            </form>
+        </div>
+        <div class="col-sm-7">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark text-center">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Teléfono Fijo</th>
+                            <th>Teléfono Celular</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaContactos" style="background-color: white;">
+  
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>  
+</main>
+
+
+<script src="http://localhost/AgendaMVC/Resources/js/jquery-3.4.1.min.js"></script>
+<script src="http://localhost/AgendaMVC/Resources/js/bootstrap.min.js"></script>
+<script src="http://localhost/AgendaMVC/Resources/js/toastr.min.js"></script>
+<script src="http://localhost/AgendaMVC/Resources/js/validaciones.js"></script>
+<script src="http://localhost/AgendaMVC/Resources/js/index.js"></script>
+</body>
+</html>
